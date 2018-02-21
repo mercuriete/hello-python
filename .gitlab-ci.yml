@@ -1,0 +1,9 @@
+image: python:3.6
+stages:
+    - lint
+
+lint:
+    stage: lint
+    script:
+        - pip install pycodestyle --quiet
+        - pycodestyle --show-source --show-pep8 *.py
